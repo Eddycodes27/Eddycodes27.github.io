@@ -1,0 +1,12 @@
+<ul>
+        <% preData.forEach((pre, index) => { %>
+    <li>
+    
+        <%= pre.type %>
+        <img src="<%= prehistoric.img_url %>" alt="<%= prehistoric.type %>">
+        <form action="/prehistoric_creatures/<%= index %>/?_method=DELETE" method="POST">
+            <input type="submit" value="Delete">
+        </form>
+    </li>
+        <% }) %>
+    </ul>
